@@ -19,7 +19,7 @@
      <% @urls.each do |p| %>
       <tr>
        <td class="table-fields"><%= p.long_url[0..35].gsub(/\s\w+\s*$/,'...') %></td>
-       <td class="table-fields"><a href="<%=p.short_url%>">http://localhost:9393/<%= p.short_url %></td>
+       <td class="table-fields"><a href="<%=p.short_url%>">https://sniplink.herokuapp.com/<%= p.short_url %></td>
        <td class="table-fields"><%= p.click_count%></td>
      <% end %>
    </tr>
