@@ -12,7 +12,7 @@ $(document).ready(function() {
       },
 
       complete: function() {
-        $('form input').val('Shortened!');
+        $('form input').val('Snipped!');
       },
 
       success: function(data) {
