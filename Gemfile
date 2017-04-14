@@ -2,7 +2,10 @@ source 'https://rubygems.org'
 
 # Ruby Version
 # ruby "2.2.1"
-
+#Adding pagination gem
+gem 'will_paginate'
+# Adding debug gem byebug
+gem 'byebug'
 # Adding Sinatra Drivers
 gem 'sinatra'
 gem 'sinatra-contrib'

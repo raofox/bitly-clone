@@ -1,2 +1,29 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+
+
+<div id="background">
+<h1 id="main-header">THE LINK KNOWS ALL. SO CAN YOU.</h1>
+<h3 id="slogan">Measure your links with Bitly, the world's leading link management platform.</h3>
+<form class="addlinkform" action="/urls" method="post">
+
+    <input id="form" type="text" name="long_url">
+    <input id="submit-button" type="submit" value="Shorten">
+ </form>
+</div>
+
+ <table class="urllist">
+   <tr>
+     <th class="field-headers">Long Url</th>
+     <th class="field-headers">Short Url</th>
+     <th class="field-headers">Click Count</th>
+  </tr>
+     <% @urls.each do |p| %>
+      <tr>
+       <td class="table-fields"><%= p.long_url[0..35].gsub(/\s\w+\s*$/,'...') %></td>
+       <td class="table-fields"><a href="<%=p.short_url%>">http://localhost:9393/<%= p.short_url %></td>
+       <td class="table-fields"><%= p.click_count%></td>
+     <% end %>
+   </tr>
+ </table>
+
+
+<%= will_paginate @urls %>
